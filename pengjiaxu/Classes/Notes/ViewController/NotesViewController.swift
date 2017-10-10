@@ -37,8 +37,9 @@ class NotesViewController: UIViewController,UITableViewDelegate,UITableViewDataS
     func setupBarButtonItem() {
 
         let backButton = UIButton.init(type: .custom)
-        backButton.setImage(UIImage(named: "addNote"), for: .normal)
-        backButton.frame = CGRect(x: 0, y: 0, width: 26, height: 26)
+        backButton.frame = CGRect(x: 0, y: 0, width: 26, height: 40)
+        backButton.setTitle("新增", for: .normal)
+        backButton.setTitleColor(UIColor.black, for: .normal)
         backButton.addTarget(self, action: #selector(addNoteAction), for: .touchUpInside)
         navigationItem.rightBarButtonItem = UIBarButtonItem(customView: backButton)
 
